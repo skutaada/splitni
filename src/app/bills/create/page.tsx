@@ -4,5 +4,9 @@ import { getAllUsers } from "@/server/actions";
 export default async function BillsCreate() {
   const users = await getAllUsers();
 
-  return <Form users={users} />;
+  return (
+    <main className="m-6">
+      <Form users={users} />
+    </main>
+  );
 }
