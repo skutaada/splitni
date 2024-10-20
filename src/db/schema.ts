@@ -11,5 +11,7 @@ export const billsTable = sqliteTable("bills_table", {
   id: int().primaryKey({ autoIncrement: true }),
   name: text().notNull(),
   amount: int().notNull(),
-  userId: int("user_id").references(() => usersTable.id),
+  userId: int("user_id")
+    .notNull()
+    .references(() => usersTable.id),
 });

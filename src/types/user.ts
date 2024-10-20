@@ -1,9 +1,4 @@
-interface UserBase {
-  name: string;
-  age: number;
-  email: string;
-}
+import { usersTable } from "@/db/schema";
 
-export interface UserGet extends UserBase {
-  id: number;
-}
+export type UserSelect = typeof usersTable.$inferSelect;
+export type UserInsert = typeof usersTable.$inferInsert;

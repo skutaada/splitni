@@ -1,8 +1,8 @@
 import { getAllUsers } from "@/server/actions";
-import { UserGet } from "@/types/user";
+import { UserSelect } from "@/types/user";
 
 export default async function Home() {
-  const users: UserGet[] = await getAllUsers();
+  const users: UserSelect[] = await getAllUsers();
 
   return (
     <div>
